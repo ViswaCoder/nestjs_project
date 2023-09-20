@@ -1,3 +1,6 @@
 [submodule "protofiles"]
 	path = protofiles
 	url = https://github.com/ViswaCoder/proto.git
+[submodule "proto"]
+	path = proto
+	url = https://github.com/ViswaCoder/proto.git
