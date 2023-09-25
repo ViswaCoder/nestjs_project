@@ -11,7 +11,7 @@ async function bootstrap() {
         options: {
             url: "127.0.0.1:4001",
             package: "protobufPackage",
-            protoPath: (0, path_1.join)(__dirname, "protos/user/user.proto"),
+            protoPath: (0, path_1.join)(__dirname, "proto/e-wallet/e-wallet.proto"),
         },
     });
     app.useGlobalPipes(new common_1.ValidationPipe({ whitelist: true, transform: true }));

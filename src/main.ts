@@ -12,7 +12,7 @@ async function bootstrap() {
       options: {
         url: "127.0.0.1:4001",
         package: "protobufPackage",
-        protoPath: join(__dirname, "protos/user/user.proto"),
+        protoPath: join(__dirname, "proto/e-wallet/e-wallet.proto"),
       },
     }
   );
