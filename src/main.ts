@@ -1,9 +1,8 @@
-import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
-import { Transport } from '@nestjs/microservices';
-import { INestMicroservice, ValidationPipe } from '@nestjs/common';
-import { join } from 'path';
-import { protobufPackage } from './proto/user.pb';
+import { NestFactory } from "@nestjs/core";
+import { AppModule } from "./app.module";
+import { Transport } from "@nestjs/microservices";
+import { INestMicroservice, ValidationPipe } from "@nestjs/common";
+import { join } from "path";
 
 async function bootstrap() {
   const app: INestMicroservice = await NestFactory.createMicroservice(
@@ -11,11 +10,11 @@ async function bootstrap() {
     {
       transport: Transport.GRPC,
       options: {
-        url: '127.0.0.1:4001',
-        package: protobufPackage,
-        protoPath: join(__dirname, 'proto/user.proto'),
+        url: "127.0.0.1:4001",
+        package: "protobufPackage",
+        protoPath: join(__dirname, "protos/user/user.proto"),
       },
-    },
+    }
   );
 
   app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));

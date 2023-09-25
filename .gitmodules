@@ -7,3 +7,6 @@
 [submodule "src/proto"]
 	path = src/proto
 	url = https://github.com/ViswaCoder/proto.git
+[submodule "src/protos"]
+	path = src/protos
+	url = https://github.com/ViswaCoder/proto.git
